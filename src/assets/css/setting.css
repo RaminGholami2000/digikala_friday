@@ -11,3 +11,22 @@
     box-sizing: border-box;
     font-family: yekan;
 }
+:root{
+    --gray-color-100:#f0f0f1;
+    --gray-color-200:#a1a3a8;
+    --gray-color-300:#e0e0e2;
+    --dark-color-50:#424750;
+    --dark-color-100:#0c0c0c;
+
+}
+svg{
+    fill: inherit !important;
+    stroke: inherit !important;
+}
+.line{
+    width: 1px;
+    height: 24px;
+    margin: 0px 12px;
+    background-color: var(--gray-color-300);
+
+}
