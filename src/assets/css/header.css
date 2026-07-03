@@ -1,7 +1,6 @@
 .header {
   width: 100%;
-  height: 300px;
-  background-color: aqua;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.14), 0 2px 0 rgba(0, 0, 0, 0.05);
   .baner {
     width: 100%;
     height: 60px;
@@ -57,59 +56,134 @@
         }
       }
     }
-    .handle-box{
+    .handle-box {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      .notif-sig-in {
         display: flex;
         flex-flow: row wrap;
+        justify-content: flex-start;
         align-items: center;
-        .notif-sig-in{
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-            .notif{
-                padding: 8px;
-                fill: var(--dark-color-50);
-            }
-            .sign-in{
-                padding: 8px 16px;
-                border-radius: 8px;
-                border: 1px solid var(--gray-color-300);
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                font-size: 12px;
-                color: var(--dark-color-100);
-                fill: var(--dark-color-100);
-            }
-            .shop{
-                padding: 8px;
-                fill: var(--dark-color-50);
-            }
+        gap: 10px;
+        .notif {
+          padding: 8px;
+          fill: var(--dark-color-50);
         }
+        .sign-in {
+          padding: 8px 16px;
+          border-radius: 8px;
+          border: 1px solid var(--gray-color-300);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 12px;
+          color: var(--dark-color-100);
+          fill: var(--dark-color-100);
+        }
+        .shop {
+          padding: 8px;
+          fill: var(--dark-color-50);
+        }
+      }
     }
   }
-
 }
-.header .bottom{
-    background-color: deeppink;
+.header .bottom {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
 }
-.header .menu-items{
-    background-color: crimson;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    list-style: none;
-
+.header .menu-items {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style: none;
 }
-.header .menu-item{
-    background-color: aquamarine;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0px 12px;
-    font-size: 14px;
+.header .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 12px;
+  font-size: 14px;
 }
-.header .menu-item.link{
-    font-size: 12px;
+.header .menu-item.link {
+  font-size: 12px;
+}
+.header .bottom .btn {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 5px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 99999px;
+  -webkit-border-radius: 99999px;
+  -moz-border-radius: 99999px;
+  -ms-border-radius: 99999px;
+  -o-border-radius: 99999px;
+  background-color: var(--orange-color-100);
+  color: var(--orange-color-200);
+  fill: var(--orange-color-200);
+  cursor: pointer;
+  position: relative;
+}
+.header .bottom .btn::after {
+  content: "انتخاب آدرس";
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: rgb(109, 54, 15);
+  color: bisque;
+  line-height: 30px;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 100px / 2);
+  display: none;
+  text-align: center;
+}
+.header .bottom .btn:hover::after {
+  display: block;
+}
+.header .cityWraper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.header .cityWraper .chose-city {
+  width: 50%;
+  height: 400px;
+  background-color: white;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  position: absolute;
+  inset: 0 ;
+  margin: auto;
+}
+#show:checked ~ .cityWraper{
+  display: block;
+}
+input[type=radio]{
+  display: none;
+}
+.city-header{
+  padding: 15px;
+}
+.city-header [for="hide"]{
+  background-color: #E71818;
+  font-size: 18px;
+  cursor: pointer;
 }

@@ -1,0 +1,18 @@
+.support{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(150deg, rgb(127, 83, 239) 14.63%, rgb(37, 134, 255));
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    fill: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+  
